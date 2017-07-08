@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>CSS3多背景使用方法</title>
+	<style type="text/css">
+		.demo {
+			margin: 0 auto;
+			width: 1000px;
+			height: 1000px;
+			border: 5px solid rgba(104, 104, 142, 0.5);
+			border-radius: 10px;
+			padding: 80px 60px;
+			color: #f36;
+			font-size: 25px;
+			line-height: 1.5;
+			text-align: center;
+		}
+		
+		.multipleBg {
+			background: url("bg-tl.jpg") no-repeat left top,
+						url("bg-tr.jpg") no-repeat right top,
+						url("bg-bl.jpg") no-repeat left bottom,
+						url("bg-br.jpg") no-repeat right bottom;
+			-webkit-background-origin: border-box,border-box,border-box,border-box,padding-box;
+			-moz-background-origin: border-box,border-box,border-box,border-box,padding-box;
+			-webkit-background-clip: border-box;
+			-moz-background-clip: border-box;
+		}
+	</style>
+</head>
+<body>
+	<div class="demo multipleBg"></div>
+</body>
+</html>
