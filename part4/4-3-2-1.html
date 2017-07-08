@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>background-clip使用方法</title>
+	<style type="text/css">
+		div {
+			width: 200px;
+			height: 100px;
+			border: 30px dashed rgba(25,25,125,0.5);
+			background: orange url(border.jpg) no-repeat;
+			padding: 30px;
+			margin: 20px;
+		}
+		
+		.border-box {
+			-webkit-background-clip: border-box;
+			-moz-background-clip: border-box;
+		}
+		
+		.padding-box {
+			-webkit-background-clip: padding-box;
+			-moz-background-clip: padding-box;
+		}
+		
+		.content-box {
+			-webkit-background-clip: content-box;
+			-moz-background-clip: content-box;
+		}
+	</style>
+</head>
+<body>
+	<div class="border-box">1111</div>
+	<div class="padding-box">2222</div>
+	<div class="content-box">3333</div>
+</body>
+</html>
