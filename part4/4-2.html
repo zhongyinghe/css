@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>background-origin使用方法</title>
+	<style type="text/css">
+		div {
+			width: 300px;
+			height: 200px;
+			border: 20px dashed rgba(0,0,0,0.3);
+			background: orange url(bg.jpg) no-repeat left top;
+			padding: 20px;
+			margin: 30px;
+		}
+		
+		.padding-box {
+			-webkit-background-origin: content-box;
+			-moz-background-origin: content-box;
+		}
+	</style>
+</head>
+<body>
+	<div class="padding-box"></div>
+</body>
+</html>
