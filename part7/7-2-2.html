@@ -1,0 +1,144 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="utf-8">
+	<title>手风琴+布局</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		
+		.wrapper {
+			width: 960px;
+			margin-left: auto;
+			margin-right: auto;
+			color: #fff;
+			font-size: 30px;
+			text-align: center;
+		}
+		
+		#header {
+			height: 100px;
+			background: #38382e;
+			margin-bottom: 10px;
+			padding: 10px;
+			box-sizing: border-box;
+		}
+		
+		.sidebar {
+			float: left;
+			width: 220px;
+			margin-right: 20px;
+			margin-bottom: 10px;
+			height: 600px;
+			background: #5d33cf;
+			padding: 10px;
+			box-sizing: border-box;
+		}
+		
+		.content {
+			float: left;
+			width: 720px;
+			height: 600px;
+			background: #c8ca30;
+			margin-bottom: 10px;
+			padding: 10px;
+			box-sizing: border-box;
+		}
+		
+		#footer {
+			background: #cc4ad5;
+			height: 100px;
+			clear: both;
+			padding: 10px;
+			box-sizing: border-box;
+		}
+		
+		a {
+			background: #8f8f8f;
+			background: -moz-linear-gradient(top, #cecece, #8f8f8f);
+			background: linear-gradient(top, #cecece, #8f8f8f);
+			border-radius: 5px;
+			display: block;
+			margin: 0;
+			padding: 0px;
+			margin: 10px;
+			text-decoration: none;
+		}
+		ul {
+			margin: 0;
+			height: 0;
+			overflow: hidden;
+			padding: 0 10px;
+			-moz-transition: height 0.5s ease-in;
+			transition: height 0.5s ease-in;
+		}
+		
+		li {
+			list-style: none;
+		}
+		
+		
+		.accordionMenu :target ul {
+			height: 250px;
+			overflow: hidden;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<div id="header">页眉</div>
+		<div class="sidebar">
+			<div class="accordionMenu">
+				<div id="brand">
+					<a href="#brand">菜单一</a>
+					<ul>
+						<li>itme1</li>
+						<li>itme2</li>
+						<li>itme3</li>
+						<li>itme4</li>
+						<li>itme5</li>
+						<li>itme6</li>
+					</ul>
+				</div>
+				<div id="toget">
+					<a href="#toget">菜单二</a>
+					<ul>
+						<li>itme1</li>
+						<li>itme2</li>
+						<li>itme3</li>
+						<li>itme4</li>
+						<li>itme5</li>
+						<li>itme6</li>
+					</ul>
+				</div>
+				<div id="vivo">
+					<a href="#vivo">菜单三</a>
+					<ul>
+						<li>itme1</li>
+						<li>itme2</li>
+						<li>itme3</li>
+						<li>itme4</li>
+						<li>itme5</li>
+						<li>itme6</li>
+					</ul>
+				</div>
+				<div id="oppo">
+					<a href="#oppo">菜单四</a>
+					<ul>
+						<li>itme1</li>
+						<li>itme2</li>
+						<li>itme3</li>
+						<li>itme4</li>
+						<li>itme5</li>
+						<li>itme6</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="content">主内容</div>
+		<div id="footer">页脚</div>
+	</div>
+</body>
+</html>
