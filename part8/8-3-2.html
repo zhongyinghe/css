@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="utf-8">
+	<title>flex-direction取值为row的基本使用</title>
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		
+		.flexbox-container {
+			padding: 10px;
+			margin: 50px;
+			border: 1px solid hsla(120,30%,50%, 0.8);
+			background-color: hsla(10, 80%, 10%, 0.2);
+			
+			/*设置为伸缩容器*/
+			/*旧版本*/
+			display: -webkit-box;
+			display: -moz-box;
+			/*混合版本*/
+			display: -ms-flexbox;
+			/*新版本*/
+			display: flex;
+			display: -webkit-flex;
+			
+			/*设置伸缩流*/
+			-moz-box-orient: vertical;
+			-webkit-box-orient: vertical;
+			box-orient: vertical;
+			-moz-box-direction: reverse;
+			-webkit-box-direction: reverse;
+			/*混合版*/
+			-ms-flex-direction: column-reverse;
+			/*新版*/
+			flex-direction: column-reverse;
+			-webkit-flex-direction: column-reverse;
+		}
+		
+		.flexbox-container > div {
+			width: 100px;
+			height: 100px;
+			border: 1px solid hsla(120, 30%, 50%, 0.8);
+			margin: 5px;
+			font-size: 20px;
+			text-align: center;
+			line-height: 100px;
+			color: #fff;
+			font-weight: bold;
+			
+		}
+		
+		.flexbox-container > div:nth-child(1) {
+			background-color: hsla(120, 30%, 50%, 0.8);
+		}
+		
+		.flexbox-container > div:nth-child(2) {
+			background-color: hsla(120, 30%, 10%, 0.8);
+		}
+		
+		.flexbox-container > div:nth-child(3) {
+			background-color: hsla(20, 30%, 50%, 0.8);
+		}
+		
+		.flexbox-container > div:nth-child(4) {
+			background-color: hsla(20, 30%, 50%, 0.8);
+		}
+		
+		.flexbox-container > div:nth-child(5) {
+			background-color: hsla(320, 80%, 50%, 0.8);
+		}
+		
+		.flexbox-container > div:nth-child(6) {
+			background-color: hsla(320, 80%, 80%, 0.8);
+		}
+	</style>
+</head>
+<body>
+	<div class="flexbox-container">
+		<div>Box1</div>
+		<div>Box2</div>
+		<div>Box3</div>
+		<div>Box4</div>
+		<div>Box5</div>
+		<div>Box6</div>
+	</div>
+</body>
+</html>
