@@ -1,0 +1,129 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="utf-8">
+	<title>-ms-flex的基本使用</title>
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		
+		.flexbox-container {
+			border: 1px solid hsla(120, 30%, 50%, 0.8);
+			margin: 50px;
+			background-color: hsla(10, 80%, 10%, 0.2);
+			height: 300px;
+		}
+		
+		.flexbox-container > div {
+			border: 1px solid hsla(120, 30%, 50%, 0.8);
+			font-size: 20px;
+			text-align: center;
+			color: #fff;
+			font-weight: bold;
+		}
+		
+		.flexbox-container > div:nth-child(1) {
+			background-color: hsla(120, 30%, 50%, 0.8);
+		}
+		
+		.flexbox-container > div:nth-child(2) {
+			background-color: hsla(120, 30%, 10%, 0.8);
+		}
+		
+		.flexbox-container > div:nth-child(3) {
+			background-color: hsla(20, 30%, 50%, 0.8);
+		}
+		
+		.flexbox-container > div:nth-child(4) {
+			background-color: hsla(20, 80%, 50%, 0.8);
+		}
+		
+		/*声明伸缩容器*/
+		.flexbox-container {
+			/*设置body为伸缩容器*/
+			/*旧版本*/
+			display: -webkit-box;
+			display: -moz-box;
+			/*混合版本*/
+			display: -ms-flexbox;
+			/*新版本*/
+			display: -webkit-flex;
+			display: flex;
+			
+			/*设置伸缩流*/
+			-moz-box-orient: horizontal;
+			-webkit-box-orient: horizontal;
+			box-orient: horizontal;
+			/*混合版*/
+			-ms-flex-direction: row;
+			/*新版*/
+			flex-direction: row;
+			-webkit-flex-direction: row;
+			
+			/*设置多行*/
+			/*旧版*/
+			-moz-box-lines: multiple;
+			-webkit-box-lines: multiple;
+			/*混合版*/
+			-ms-flex-wrap: wrap;
+			/*新版*/
+			-webkit-flex-wrap: wrap;
+			flex-wrap: wrap;
+			
+			/*设置主轴*/
+			/*旧版*/
+			-moz-box-pack: center;
+			-webkit-box-pack: center;
+			box-pack: center;
+			/*混合版*/
+			-ms-flex-pack: center;
+			/*新版*/
+			-webkit-justify-content: center;
+			justify-content: center;
+			
+			/*设置侧轴对齐*/
+			/*旧版*/
+			-moz-box-align: center;
+			-webkit-box-align: center;
+			box-align: center;
+			/*混合版*/
+			-ms-flex-align: center;
+			/*新版*/
+			-webkit-align-items: center;
+			align-items: center;
+		}
+		
+		.flexbox-container > div {
+			/*旧版*/
+			-moz-box-flex: 1;
+			-webkit-box-flex: 1;
+			/*混合版*/
+			-ms-flex: 1;
+			/*新版*/
+			-webkit-flex: 1;
+			flex: 1;
+		}
+		
+		.flexbox-container > div:hover {
+			/*旧版*/
+			-moz-box-flex: 2;
+			-webkit-box-flex: 2;
+			/*混合版*/
+			-ms-flex: 2;
+			/*新版*/
+			-webkit-flex: 2;
+			flex: 2;
+		}
+	</style>
+</head>
+<body>
+	<div class="flexbox-container">
+		<div>Box1</div>
+		<div>Box2</div>
+		<div>Box3</div>
+		<div>Box4</div>
+	</div>
+</body>
+</html>
