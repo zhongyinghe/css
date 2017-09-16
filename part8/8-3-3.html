@@ -1,0 +1,100 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="utf-8">
+	<title>flex-wrap的基本使用</title>
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		
+		.flexbox-container {
+			padding: 10px;
+			margin: 50px;
+			width: 400px;
+			border: 1px solid hsla(120,30%,50%, 0.8);
+			background-color: hsla(10, 80%, 10%, 0.2);
+			
+			/*设置为伸缩容器*/
+			/*旧版本*/
+			display: -webkit-box;
+			display: -moz-box;
+			/*混合版本*/
+			display: -ms-flexbox;
+			/*新版本*/
+			display: flex;
+			display: -webkit-flex;
+			
+			/*设置伸缩流*/
+			-moz-box-orient: horizontal;
+			-webkit-box-orient: horizontal;
+			box-orient: horizontal;
+			
+			/*混合版*/
+			-ms-flex-direction: row;
+			/*新版*/
+			flex-direction: row;
+			-webkit-flex-direction: row;
+			
+			/*设置多行*/
+			/*旧版*/
+			-moz-box-lines: multiple;
+			-webkit-box-lines: multiple;
+			box-lines: multiple;
+			/*混合版*/
+			-ms-flex-wrap: wrap;
+			/*新版*/
+			-webkit-flex-wrap: wrap;
+			flex-wrap: wrap;
+		}
+		
+		.flexbox-container > div {
+			width: 100px;
+			height: 100px;
+			border: 1px solid hsla(120, 30%, 50%, 0.8);
+			margin: 5px;
+			font-size: 20px;
+			text-align: center;
+			line-height: 100px;
+			color: #fff;
+			font-weight: bold;
+			
+		}
+		
+		.flexbox-container > div:nth-child(1) {
+			background-color: hsla(120, 30%, 50%, 0.8);
+		}
+		
+		.flexbox-container > div:nth-child(2) {
+			background-color: hsla(120, 30%, 10%, 0.8);
+		}
+		
+		.flexbox-container > div:nth-child(3) {
+			background-color: hsla(20, 30%, 50%, 0.8);
+		}
+		
+		.flexbox-container > div:nth-child(4) {
+			background-color: hsla(20, 30%, 50%, 0.8);
+		}
+		
+		.flexbox-container > div:nth-child(5) {
+			background-color: hsla(320, 80%, 50%, 0.8);
+		}
+		
+		.flexbox-container > div:nth-child(6) {
+			background-color: hsla(320, 80%, 80%, 0.8);
+		}
+	</style>
+</head>
+<body>
+	<div class="flexbox-container">
+		<div>Box1</div>
+		<div>Box2</div>
+		<div>Box3</div>
+		<div>Box4</div>
+		<div>Box5</div>
+		<div>Box6</div>
+	</div>
+</body>
+</html>
