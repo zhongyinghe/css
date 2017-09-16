@@ -1,0 +1,95 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="utf-8">
+	<title>混合版堆栈伸缩行</title>
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		
+		.flexbox {
+			margin: 0.25em 5em;
+			border: 1px solid hsla(120, 30%, 50%, 0.8);
+			background-color: hsla(10, 80%, 10%, 0.2);
+			height: 250px;
+		}
+		
+		
+		.flexbox > div {
+			border: 1px solid hsla(120, 30%, 50%, 0.8);
+			font: bold 2em arial;
+			color: #fff;
+			width: 150px;
+			padding: 0.2em;
+		}
+		
+		.flexbox > div:nth-child(odd) {
+			background-color: hsla(120, 30%, 50%, 0.8);
+		}
+		
+		.flexbox > div:nth-child(even) {
+			background-color: hsla(120, 30%, 10%, 0.8);
+		}
+		
+		.flexbox {
+			/*设置为伸缩容器*/
+			/*旧版本*/
+			display: -webkit-box;
+			display: -moz-box;
+			/*混合版本*/
+			display: -ms-flexbox;
+			/*新版本*/
+			display: flex;
+			display: -webkit-flex;
+			
+			/*设置多行*/
+			/*混合版*/
+			-ms-flex-wrap: wrap;
+			/*新版*/
+			-webkit-flex-wrap: wrap;
+			flex-wrap: wrap;
+		}
+		
+		.flex-direction-column {
+			-ms-flex-direction: column;
+			-webkit-flex-direction: column;
+			flex-direction: column;
+		}
+		
+		.flex-line-pack-start {
+			/*混合版*/
+			-ms-flex-line-pack: justify;
+			
+			/*新版*/
+			-webkit-align-content: space-between;
+			align-content: space-between;
+		}
+	</style>
+</head>
+<body>
+	<div class="flexbox flex-line-pack-start">
+		<div>box1</div>
+		<div>box2</div>
+		<div>box3</div>
+		<div>box4</div>
+		<div>box5</div>
+		<div>box6</div>
+		<div>box7</div>
+		<div>box8</div>
+		<div>start</div>
+	</div>
+	<div class="flexbox flex-line-pack-start flex-direction-column">
+		<div>box1</div>
+		<div>box2</div>
+		<div>box3</div>
+		<div>box4</div>
+		<div>box5</div>
+		<div>box6</div>
+		<div>box7</div>
+		<div>box8</div>
+		<div>start</div>
+	</div>
+</body>
+</html>
